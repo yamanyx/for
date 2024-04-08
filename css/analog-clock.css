@@ -1,0 +1,392 @@
+
+/* @import 'styles.css'; */
+
+:root {
+
+	--bg-clock: #ecf0f3;
+	--bg-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03),0 0.9375rem 1.40625rem rgba(4,9,20,0.03),0 0.25rem 0.53125rem rgba(4,9,20,0.05),0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+	--bg-shadow-1 : inset 18px 18px 30px 2px #d1d9e6, inset -18px -18px 30px 2px #fff, 0 0.234375rem 2.1875rem #D1D4E6, inset 0 0.234375rem 2.1875rem rgba(4,9,20,.2);
+
+	--darkblue: #202838;
+	--white-light: #ecf0f3;
+
+	--clock-dimensions: 300px;
+	--clock-padding: 29px;
+	--clock-font-size: calc(2em - 10px);
+
+}
+
+*,
+*::before,
+*::after {
+  	box-sizing: border-box;
+    user-select: none; /* Standard syntax */
+}
+
+body {
+    background: var(--bg-clock);
+    overflow-x: hidden;
+}
+body > div {
+    margin:  0 auto;
+}
+
+
+.clock-container {
+	width: var(--clock-dimensions);
+	height: var(--clock-dimensions);
+	padding: var(--clock-padding);
+	background: var(--bg-clock);
+
+	background-color: #ecf0f3;
+}
+
+.clock-body {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+	border: 1px double gray;
+
+	background: transparent;
+
+  	box-shadow: 18px 18px 30px 2px #d1d9e6, -18px -18px 30px 2px #fff;
+
+	position: relative;
+}
+
+#clock-main {
+
+	position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+
+    width: 95%;
+	height: 95%;
+
+    background-color:none;
+
+    border-radius: 50%;
+    border: 1px solid var(--darkblue);
+
+}
+
+#clock-main:nth-child(1) > div {
+
+	height: 2.5px;
+    background-color: var(--darkblue);
+
+    position: absolute;
+    top: calc(50% - 1.5px);
+
+
+}
+
+#clock-main > div {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: calc(50% - 0.5px);
+
+    background-color: var(--darkblue);
+}
+
+#clock-main > div:nth-child(1){
+    transform:rotate(0deg);
+}
+#clock-main > div:nth-child(2){
+    transform:rotate(30deg);
+}
+#clock-main > div:nth-child(3){
+    transform:rotate(60deg);
+}
+#clock-main > div:nth-child(4){
+    transform:rotate(90deg);
+}
+#clock-main > div:nth-child(5){
+    transform:rotate(120deg);
+}
+#clock-main > div:nth-child(6){
+    transform:rotate(150deg);
+}
+#clock-main:nth-child(2){
+    transform:rotate(6deg) !important;
+}
+#clock-main:nth-child(3){
+    transform:rotate(12deg) !important;
+}
+#clock-main:nth-child(4){
+    transform:rotate(18deg) !important;
+}
+#clock-main:nth-child(5){
+    transform:rotate(24deg) !important;
+}
+
+.clock-content {
+	position: absolute;
+    top: 6%;
+    left: 6%;
+
+    width: 88%;
+	height: 88%;
+
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+
+  	box-shadow: var(--bg-shadow-1);
+}
+
+.clock-content::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #d23737;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  }
+
+.clock-content > div {
+    position:absolute;
+  	bottom: 50%;
+  	left: 50%;
+  	transform: translateX(-50%) rotate(90deg);
+  	transform-origin: bottom;
+  	border-top-left-radius: 7px;
+  	border-top-right-radius: 7px;
+  	z-index: 1;
+    opacity: .8;
+}
+
+#hour-hand {
+    width:4px;
+    height:30%;
+    background-color: var(--darkblue);
+}
+
+#minute-hand {
+    width:2px;
+    height:35%;
+    background-color: var(--darkblue);
+}
+#second-hand {
+    width:1.25px;
+    height:49%;
+    background-color: #d23737;
+}
+
+/* arrows/ pointers */
+.anArrow {
+    position: absolute;
+    padding:0;
+    border: 7.5px solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.anArrow.close {
+    top: -40%;
+    left:-100%;
+    border-bottom-color: var(--darkblue);
+}
+.anArrow.closer {
+    top: -40%;
+    left:-300%;
+    border-bottom-color: var(--darkblue);
+}
+.anArrow.closest {
+    top: -10%;
+    left:-500%;
+    border-bottom-color: #d23737;
+}
+
+.clock-label {
+	position:absolute;
+    transform-origin:0% 50%;
+    border-radius: 100px;
+    transform:rotate(-90deg);
+    z-index: 0.5;/* below pointers */
+    opacity: .8;
+
+	height:20px;
+    width:100%;
+    background-color:transparent;
+    top:calc(50% - 10px);
+    transform-origin:50% 50% !important;
+}
+
+#clock-vertical,#clock-horizontal > span{
+    display:inline-block;
+    text-align:center;
+    padding:1px;
+    font-size:var(--clock-font-size);
+}
+#clock-vertical > span {
+    transform:rotate(90deg);
+}
+#clock-vertical > span:nth-child(1){
+    float:right;
+    margin-right: calc(1.5em - 15px);
+}
+#clock-vertical > span:nth-child(2){
+    float:left;
+    margin-left: calc(1.5em - 15px);
+}
+#clock-horizontal{
+    height:20px;
+    width:100%;
+    background-color:transparent;
+    top:calc(50% - 15px);
+    transform:rotate(0deg) !important;
+    transform-origin:50% 50% !important;
+}
+#clock-horizontal > span:nth-child(1){
+    float:right;
+    margin-right: calc(1.5em - 12px);
+}
+#clock-horizontal > span:nth-child(2){
+    float:left;
+    margin-left: calc(1.5em - 12px);
+}
+/* 3d buttons */
+.blue {
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid #1c7acc;
+    box-shadow: 0px 2px  2px 1px #1f5789;
+    background-color: dodgerblue;
+    color: #fff;
+    font-size: 1.2em;
+}
+.red {
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid #9b1d1d;
+    box-shadow: 0px 2px  2px 1px #641616;
+    background-color: #d23737;
+    color: #fff;
+    font-size: 1.2em;
+}
+.btn-block {
+    display: block;
+    margin: 5px auto;
+    width: 75%;
+}
+
+/* cards */  
+.carda {
+    display: inline-block;
+    padding: 7.5px 5px;
+    color:#fff;
+}
+.carda.blue, .carda > span.blue {
+    background-color: #2196F3 !important;
+}
+.carda.red, .carda > span.red {
+    background-color: #e91e63 !important;
+}
+.carda > span:not(.not-span) {
+    display: block;
+    padding: 5px;
+}
+.carda > span:not(.not-span):first-child {
+    font-size: 1.5em;
+    font-family: "Agency FB",sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.carda > span:not(.not-span):last-child, .not-span {
+    font-size: .75em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.not-span {
+    font-size: 1em !important;
+}
+.rounded {
+    border-radius: 5px;
+}
+.flexMe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100% !important;
+}
+.flexMe div {
+    width: calc(100% / 3);
+    margin: 0 5px;
+    text-align: center; 
+}
+
+/* composite */
+span.blue.rounded {
+    box-shadow: none !important;
+    border: none !important;
+}
+span.red.rounded {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
+
+/* dark mode */
+
+
+html.clock-darkmode,
+.clock-darkmode body,
+.clock-darkmode .clock-content {
+    background: #111;
+    color: #ff974a;
+}
+
+.clock-darkmode {
+    --bg-clock: transparent;
+    --bg-shadow: 0 3px 8px 1px rgba(0,0,0,0.5),  0 1px 0 rgba(0,0,0,0.5),  0 1px 0 rgba(255,255,255,0.2);
+    --bg-shadow-1 : inset 0 3px 8px 1px rgba(0,0,0,0.5),  inset 0 1px 0 rgba(0,0,0,0.5),  0 1px 0 rgba(255,255,255,0.2);
+
+    --darkblue: rgba(226,185,155,.5);
+    --white-light: transparent;
+
+}
+
+.clock-darkmode .w3-input,
+.clock-darkmode .w3-hover-none:hover, 
+.clock-darkmode .w3-hover-white:hover {
+    color: #ff974a !important;
+}
+
+.clock-darkmode .w3-border {
+    border-color: #ff974a !important;
+}
+
+.clock-darkmode .w3-hover-white:hover {
+    background-color: rgba(0,0,0,.5) !important;
+    opacity: .8;
+}
+
+.clock-darkmode .clock-container,
+.clock-darkmode .w3-input {
+    background: transparent !important;
+}
+
+.clock-darkmode .clock-body {
+    box-shadow: 0 3px 18px rgba(0,0,0,.7) !important;
+}
+
+
+.clock-darkmode .carda {
+    opacity: .8 !important;
+}
+
+.clock-darkmode .carda .specx {
+    color: #fff !important;
+    font-weight: bold;
+}
