@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" name="viewport" />
+
+
+<title>مشغل متصفح الاسيطورة...رؤيا</title>
+<link href="https://cdn.plyr.io/3.4.4/plyr.css" rel="stylesheet" type="text/css" />
+<link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+<link href="https://www.sharingiks.com/skylive/skyjs/skyplnew.css" rel="stylesheet" />
+<link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimH-_YaQmA01Uwb7ynCSjCPVV7E6SoWUZy3h00EVmE996NFz2dU_09eh44qjOtP8mvCntYxGAjluVaLN6FRGe_nX-5J57EM_yD6aUaIi8GdYGLMPNm9_YxZJntZsWaUoq1DP1Un7kxcECVDmF6k5zZBlg5w0_4pPQPilDOCU-HbDNyAPtX2rLlIiPzpg/s256/1238418_ico.ico">
+<style>
+  
+  
+  
+  
+.videoWrapper1 {
+position: relative;
+padding-bottom: 49.25%; /* 16:9 */
+padding-top: 25px;
+height: 0;
+}
+.videoWrapper1 iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+.videoWrapper1 {
+position: relative;
+padding-bottom: 49.25%; /* 16:9 */
+padding-top: 25px;
+height: 0;
+}
+.videoWrapper1 iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;!important;
+}
+.videoWrapper {
+position: relative;
+padding-bottom: 52.25%; /* 16:9 */
+padding-top: 25px;
+height: 0;
+}
+.videoWrapper iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;!important;
+}
+
+
+.plyr,
+.plyr__video-wrapper {
+width: 100% !important;
+
+}
+.plyr audio,
+.plyr video { 
+height: 100% !important;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+.plyr--full-ui.plyr--video .plyr__control--overlaid {
+display: block;
+padding: 1.8rem 40px;
+background-color: hsl(0deg 0% 18% / 88%);
+border-radius: 20px;
+}
+.plyr--video .plyr__controls {
+background: linear-gradient(rgb(40 39 39), rgb(25 25 25));
+/* border-bottom-left-radius: inherit; */
+/* border-bottom-right-radius: inherit; */
+bottom: 10px;
+color: #fff;
+border-radius: 15px;
+position: absolute;
+right: 15px;
+left: 15px;
+transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+z-index: 3;
+/* text-align: center; */
+padding: 3px 8px 3px;
+}
+
+.plyr--audio .plyr__control.plyr__tab-focus,
+.plyr--audio .plyr__control:hover,
+.plyr--audio .plyr__control[aria-expanded="true"],
+.plyr--video .plyr__controls .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__controls .plyr__control:hover,
+.plyr--video .plyr__controls .plyr__control[aria-expanded="true"],
+.plyr__menu__container label.plyr__control input[type="radio"]:checked + span {
+background-color: rgba(156, 136, 255, 0.75);
+}
+.plyr--full-ui input[type="range"] {
+color: hsl(0deg 0% 18% / 88%);
+}
+.plyr__poster {
+background-size: cover;
+}
+.plyr__control--overlaid:focus,
+.plyr__control--overlaid:hover {
+background: #2e2e2e;
+}
+.plyr-ratio .plyr__video-wrapper {
+padding-bottom: 56.25%;
+height: 0;
+}
+.plyr-ratio .plyr__video-wrapper video {
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+}
+.plyr__menu__container .plyr__control {
+font-size: 14px;
+font-family: Google Sans, sans-serif;
+font-weight: 500;
+line-height: 1.5;
+}
+.plyr__menu__container ul,
+.plyr__menu__container ul li {
+margin: 0;
+list-style: none;
+}
+.plyr--audio .plyr__controls {
+border: 1px solid #dbe3e8;
+}
+
+.plyr--audio .plyr__control.plyr__tab-focus,
+.plyr--audio .plyr__control:hover,
+.plyr--audio .plyr__control[aria-expanded="true"],
+.plyr--video .plyr__controls .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__controls .plyr__control:hover,
+.plyr--video .plyr__controls .plyr__control[aria-expanded="true"],
+.plyr__menu__container label.plyr__control input[type="radio"]:checked + span {
+background-color: hsl(0deg 0% 18% / 88%);
+}
+
+.post-body {
+/* height: 100vh; */
+width: 100%;
+height: 100%;
+
+color: red;
+background-color: black;
+position: fixed;
+top: 0px;
+right: 0px;
+bottom: 0px;
+left: 0px;
+padding: 0;
+font-size: 10px;
+font-weight: normal;
+font-style: normal;
+font-family: Arial, Helvetica, sans-serif;
+word-break: initial;
+}
+
+#webcastx {
+    position: fixed;
+    z-index: 99999999;
+    right: 0px;
+    text-align: center;
+    /* border-radius: 50%; */
+    cursor: pointer;
+    top: 2px;
+
+}
+#tme_message {
+position: absolute;
+bottom: 0;
+left: -10px;
+width: 300px;
+padding: 10px;
+}
+#webcastx_message:after,
+#webcastx_message:before {
+content: " ";
+position: absolute;
+bottom: -21px;
+left: 23px;
+border-style: solid;
+height: 0;
+width: 0;
+border-width: 10px;
+border-color: transparent;
+}
+#webcastx_message p {
+margin: 0px 0;
+font-size: 12px;
+color: #8e8e8e;
+text-align: left;
+}
+.clossalert {
+position: absolute;
+right: 5px;
+font-size: 14px;
+border-radius: 6px;
+width: 38px;
+height: 30px;
+top: -35px;
+border: unset !important;
+}
+#webcastx_message a {
+margin: 6px 4px;
+font-weight: bold;
+color: #fff;
+background: #0088cc;
+border-radius: 6px;
+display: inline-block;
+padding: 10px;
+text-decoration: none;
+}
+.player-poster[data-poster] {
+background-size: 100% !important;
+}
+
+.circle {
+position: relative;
+width: 100px;
+height: 130px;
+}
+
+
+@keyframes stroke-draw {
+from {
+stroke: #8a3ab9;
+stroke-dasharray: 1;
+}
+to {
+stroke: #cd486b;
+transform: rotate(180deg);
+stroke-dasharray: 8;
+}
+}
+
+.circle {
+position: relative;
+width: 50px;
+height: 50px;
+}
+.circle svg {
+/*fill: none;
+   stroke: #8a3ab9;
+   stroke-linecap: round;
+   stroke-width: 3;
+   stroke-dasharray: 1;
+   stroke-dashoffset: 0;
+   animation: stroke-draw 6s ease-out infinite alternate;*/
+}
+.circle img {
+position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 25px;
+border-radius: 101%;
+}
+
+
+.plyr__video-wrapper::before {
+position: absolute;
+top: 6.0%;
+z-index: 99999999999999999;
+/* opacity: .7; */
+content: "";no-repeat;
+background-size: 75px 11px, 310px;
+height: 100%;
+width: 150px;
+background: url(https://up6.cc/2024/04/171235786673481.png) no-repeat;
+background-size: 67px 39px, 50px;
+left: 88.7%;
+}
+
+
+.plyr--loading:after {
+content: " ";
+color: #fff;
+text-align: center;
+/* display: inline-block;
+    text-decoration: none;*/
+z-index: 9999999999999999999;
+position: absolute;
+cursor: pointer;
+bottom: 300px;
+font-weight: 600;
+color: #fff6;
+display: flex;
+justify-content: center;
+align-items: center;
+  
+background: url(https://ia801706.us.archive.org/4/items/algeneralfantastic_gmail_201608/%D8%B5%D9%88%D8%B1%D8%A9%20%D8%B3%D9%88%D8%AF%D8%A7%D8%A1%20%D8%AA%D9%85%D8%A7%D9%85%D8%A7.jpg)no-repeat;
+background-size: 100% 85%, 85%;
+left: 84.2%;
+
+no-repeat center;
+position: absolute;
+height: 100%;
+width: 100%;
+top: 0;
+left: 0%;
+}
+
+/******************** snackbar ***********************/
+
+#snackbar {
+    visibility: hidden;
+    min-width: 50px;
+    margin-left: -145px;
+    background-color: rgb(37 36 36);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: 1px solid rgb(28 28 28);
+    border-radius: 4px;
+    padding: 4px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 60%;
+    font-size: 13px;
+}
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.0s, fadeout 0.5s 0.5s;
+  animation: fadein 0.0s, fadeout 0.0s 0.0s;
+}
+
+ /**********************    snackbar *****************/
+
+
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" name="viewport" />
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
+<script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
+
+
+<video class="player" autoplay="true"   controls="true" height="100%" poster="https://ia801706.us.archive.org/4/items/algeneralfantastic_gmail_201608/%D8%B5%D9%88%D8%B1%D8%A9%20%D8%B3%D9%88%D8%AF%D8%A7%D8%A1%20%D8%AA%D9%85%D8%A7%D9%85%D8%A7.jpg" id="player" style="object-fit: fill;" width="100%"></video>
+     
+     
+<script type="text/javascript">
+function gup(e){e=e.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");
+var n="[\\?&]"+e+"=([^&#]*)",
+l=new RegExp(n),
+c=l.exec(window.location.href);
+return null==c?quality:unescape(c[1])}
+var video=gup("src");
+var link=(video);
+document.addEventListener('DOMContentLoaded', () => {
+const controls = ['restart', 'play-large','play','progress', 'current-time','captions', 'settings','pip' ,'fullscreen'];
+const source = link ;
+const video = document.querySelector('video');       
+ //const player = Plyr.setup('video', {controls, captions: {active: false, update: false, language: 'auto'}});
+const defaultOptions = {controls,captions: {active: true, update: false, language: 'auto'}};
+
+  if (Hls.isSupported()) {
+   
+    const hls = new Hls();
+    hls.loadSource(source);
+    hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+
+      
+         // Transform available levels into an array of integers (height values).
+      const availableQualities = hls.levels.map(l => l.height);
+      availableQualities.unshift(0); //prepend 0 to quality array
+
+      // Add new qualities to option
+      defaultOptions.quality = {
+        default: 0, //Default - AUTO
+        options: availableQualities,
+        forced: true,
+        onChange: e => updateQuality(e) };
+
+      // Add Auto Label 
+      defaultOptions.i18n = {
+        qualityLabel: {
+          0: 'Auto' } };  
+      
+      
+
+      // Initialize here
+      const player = new Plyr(video, defaultOptions);
+    });
+    hls.attachMedia(video);
+    window.hls = hls;
+  } else {
+ 
+    const player = new Plyr(video, defaultOptions);
+  }
+
+  function updateQuality(newQuality) {
+    window.hls.levels.forEach((level, levelIndex) => {
+      if (level.height === newQuality) {
+        console.log("Found quality match with " + newQuality);
+        window.hls.currentLevel = levelIndex;
+      }
+    });
+  }
+});
+
+$(window).on("orientationchange", () => {
+   if(screen.width > screen.height){
+      // change to landscape
+   } else {
+      // change to portrait
+   }
+});
+
+
+$(window).on("load", function() {
+      $(".preloader").fadeOut("slow")
+    })
+
+
+
+</script>
+
+<script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
+
+     <!-----------  EEFH9 'D-0A D9ED 'DC'3* H5F/HB 'D'9D'F'*  ----------------->
+
+<script src='https://cdn.plyr.io/3.5.10/plyr.js'></script><script src='https://cdn.jsdelivr.net/hls.js/latest/hls.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script>/</script>
+
+</Script>
+
+
+
+
+
+
+
